@@ -3,7 +3,7 @@ import Header from "./Header";
 import banner from "../assets/banner.jpg"
 const Banner = () => {
     return (
-        <div className="mx-8 relative -top-20">
+        <div className="mx-8 relative -top-20 mb-80">
             <div className="rounded-3xl p-2 bg-[#FFFFFF4D]  border border-gray-200">
                 <div className="rounded-3xl bg-[#9538E2]">
                     <div className="pb-52 pt-16">
