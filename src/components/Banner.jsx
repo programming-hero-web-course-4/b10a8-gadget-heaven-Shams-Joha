@@ -14,7 +14,7 @@ const Banner = () => {
 
 
                         <div className="flex justify-center">
-                            <button onClick={() => console.log('clicked')} className="btn text-base bg-white rounded-3xl text-[#9538E2] font-bold px-7">Shop Now</button>
+                            <button className="btn text-base bg-white rounded-3xl text-[#9538E2] font-bold px-7">Shop Now</button>
                         </div>
 
 

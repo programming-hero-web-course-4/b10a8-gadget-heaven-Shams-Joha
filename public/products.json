@@ -1,0 +1,162 @@
+[
+    {
+        "product_id": "1",
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://i.ibb.co.com/NLhLzmP/DALL-E-2024-11-04-03-49-12-Acer-Aspire-5-laptop-on-a-minimal-background-with-sleek-silver-design-ope.webp",
+        "category": "laptop",
+        "price": 549,
+        "description": "Powerful and portable laptop with AMD Ryzen processor.",
+        "Specification": [
+            "15.6 inch Full HD",
+            "8GB RAM",
+            "256GB SSD",
+            "AMD Ryzen 5"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "2",
+        "product_title": "Dell Inspiron 15",
+        "product_image": "https://i.ibb.co.com/TBcKXtY/DALL-E-2024-11-04-03-49-13-Dell-Inspiron-15-laptop-on-a-minimal-background-featuring-a-sleek-silver.webp",
+        "category": "laptop",
+        "price": 699,
+        "description": "High-performance laptop with Intel Core i7 processor.",
+        "Specification": [
+            "15.6 inch Full HD",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel Core i7"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "3",
+        "product_title": "HP Pavilion 14",
+        "product_image": "https://i.ibb.co.com/cgWkPY3/DALL-E-2024-11-04-03-49-15-HP-Pavilion-14-laptop-on-a-minimal-background-with-a-sleek-metallic-silve.webp",
+        "category": "laptop",
+        "price": 599,
+        "description": "Lightweight laptop with Intel Core i5 processor.",
+        "Specification": [
+            "14 inch Full HD",
+            "8GB RAM",
+            "256GB SSD",
+            "Intel Core i5"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": "4",
+        "product_title": "HP Pavilion 14",
+        "product_image": "https://i.ibb.co.com/cgWkPY3/DALL-E-2024-11-04-03-49-15-HP-Pavilion-14-laptop-on-a-minimal-background-with-a-sleek-metallic-silve.webp",
+        "category": "laptop",
+        "price": 599,
+        "description": "Lightweight laptop with Intel Core i5 processor.",
+        "Specification": [
+            "14 inch Full HD",
+            "8GB RAM",
+            "256GB SSD",
+            "Intel Core i5"
+        ],
+        "availability": false,
+        "rating": 4.3
+    },
+    {
+        "product_id": "5",
+        "product_title": "Asus ZenBook 14",
+        "product_image": "https://i.ibb.co.com/X53N6wf/DALL-E-2024-11-04-03-55-05-A-sleek-lightweight-Asus-Zen-Book-14-laptop-displayed-on-a-modern-desk-se.webp",
+        "category": "laptop",
+        "price": 849,
+        "description": "Ultra-slim laptop with OLED display and Intel Core i7 processor.",
+        "Specification": [
+            "14 inch OLED",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel Core i7"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "6",
+        "product_title": "MacBook Air M1",
+        "product_image": "https://i.ibb.co.com/Lh8tqjb/DALL-E-2024-11-04-03-46-12-A-realistic-image-of-a-modern-Apple-Mac-Book-Air-M1-laptop-with-a-13-3-in.webp",
+        "category": "laptop",
+        "price": 999,
+        "description": "Apple's thin and powerful MacBook Air with M1 chip.",
+        "Specification": [
+            "13.3 inch Retina",
+            "8GB RAM",
+            "256GB SSD",
+            "Apple M1 chip"
+        ],
+        "availability": false,
+        "rating": 4.9
+    },
+    {
+        "product_id": "7",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/VDrmZVq/DALL-E-2024-11-04-03-46-15-A-high-quality-image-of-an-i-Phone-14-Pro-smartphone-in-a-modern-setting.webp",
+        "category": "iphone",
+        "price": 1099,
+        "description": "The latest iPhone with a powerful A16 Bionic chip and Pro camera system.",
+        "Specification": [
+            "6.1 inch Super Retina XDR",
+            "128GB storage",
+            "A16 Bionic chip",
+            "Triple-lens camera"
+        ],
+        "availability": true,
+        "rating": 5.0
+    },
+    {
+        "product_id": "8",
+        "product_title": "Samsung Galaxy S22",
+        "product_image": "https://i.ibb.co.com/MgHDnDS/DALL-E-2024-11-04-03-46-16-A-professional-image-of-Samsung-Galaxy-S22-smartphone-in-an-elegant-indoo.webp",
+        "category": "phone",
+        "price": 799,
+        "description": "High-performance Android phone with stunning display and camera.",
+        "Specification": [
+            "6.2 inch AMOLED",
+            "128GB storage",
+            "Snapdragon 8 Gen 1",
+            "Triple-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "9",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/2FSKpv1/DALL-E-2024-11-04-03-54-45-A-sleek-modern-Apple-Watch-Series-8-with-a-stainless-steel-case-and-custo.webp",
+        "category": "smartwatches",
+        "price": 399,
+        "description": "Advanced smartwatch with fitness tracking and health features.",
+        "Specification": [
+            "41mm display",
+            "GPS + Cellular",
+            "Heart Rate Monitor",
+            "Blood Oxygen App"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "10",
+        "product_title": "JBL Wireless Earbuds",
+        "product_image": "https://i.ibb.co.com/zZb4HbH/DALL-E-2024-11-04-03-54-54-Close-up-of-a-pair-of-JBL-wireless-earbuds-in-a-stylish-black-color-with.webp",
+        "category": "accessories",
+        "price": 129,
+        "description": "High-quality wireless earbuds with noise cancellation.",
+        "Specification": [
+            "Active Noise Cancelling",
+            "Bluetooth 5.0",
+            "24-hour battery life",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.4
+    }
+]
