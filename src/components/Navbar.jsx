@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='mt-10'>
             {/* Navbar */}
-            <div className="navbar bg-transparent container mx-auto  flex justify-between sticky z-100">
+            <div className="navbar bg-transparent container mx-auto  flex justify-between relative z-10 ">
                 <div>
                     <Link className='text-xl font-bold text-white' to='/'>Gadget Heaven</Link>
                 </div>
