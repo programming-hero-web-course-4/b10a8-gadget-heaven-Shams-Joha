@@ -16,7 +16,7 @@
         "rating": 4.5
     },
     {
-        "product_id": "2",
+        "product_id": "2",  
         "product_title": "Dell Inspiron 15",
         "product_image": "https://i.ibb.co.com/TBcKXtY/DALL-E-2024-11-04-03-49-13-Dell-Inspiron-15-laptop-on-a-minimal-background-featuring-a-sleek-silver.webp",
         "category": "laptop",

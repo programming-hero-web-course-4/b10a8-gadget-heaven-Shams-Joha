@@ -11,11 +11,41 @@ const Navbar = () => {
                     <Link className='text-xl font-bold text-white' to='/'>Gadget Heaven</Link>
                 </div>
                 <div>
-                    <ul className='flex gap-6 text-white text-lg'>
-                        <li><NavLink>Home</NavLink></li>
-                        <li><NavLink>Statistics</NavLink></li>
-                        <li><NavLink>Dashboard</NavLink></li>
-                        <li><NavLink>On Sale</NavLink></li>
+                    <ul className='flex gap-6  text-lg'>
+                        <NavLink
+                            className={({ isActive }) =>
+                                `font-bold ${isActive ? 'text-red-500' : 'hover:text-gray-500'}`
+                            }
+                            to='/'
+                        >
+                            Home
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                            }
+                            to='/statistics'
+                        >
+                            Statistics
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                            }
+                            to='/dashboard'
+                        >
+                            Dashboard
+                        </NavLink>
+                        <NavLink
+                            className={({ isActive }) =>
+                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                            }
+                            to='/onsale'
+                        >
+                            On Sale
+                        </NavLink>
+
+
                     </ul>
                 </div>
                 {/* Cart & Wishlist Icon */}

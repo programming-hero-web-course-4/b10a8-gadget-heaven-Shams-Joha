@@ -1,6 +1,7 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
+import Categories from "../components/Categories";
 
 
 const Home = () => {
@@ -15,21 +16,14 @@ const Home = () => {
                 <div className="flex">
                     {/* Category Column */}
                     <div className="w-1/4">
-                        <div role="tablist" className="tabs flex flex-col">
-                            {
-                                categoryData.map(category => <NavLink key={category.id} to={`/category/${category.category}`} role="tab" className={({ isActive }) =>
-                                    `tab text-2xl font-thin ${isActive ? 'tab-active' : ''}`
-                                } >{category.category}</NavLink>)
-                            }
-                        </div>
-
+                        <Categories categoryData={categoryData}></Categories>
                     </div>
 
                     {/* Products Column */}
                     <div className="w-3/4">
-                        <div>
-                            <Outlet></Outlet>
-                        </div>
+
+                        <Outlet></Outlet>
+
                     </div>
 
                 </div>
