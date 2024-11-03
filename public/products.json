@@ -16,7 +16,7 @@
         "rating": 4.5
     },
     {
-        "product_id": "2",  
+        "product_id": "2",
         "product_title": "Dell Inspiron 15",
         "product_image": "https://i.ibb.co.com/TBcKXtY/DALL-E-2024-11-04-03-49-13-Dell-Inspiron-15-laptop-on-a-minimal-background-featuring-a-sleek-silver.webp",
         "category": "laptop",
@@ -49,10 +49,10 @@
     },
     {
         "product_id": "4",
-        "product_title": "HP Pavilion 14",
+        "product_title": "HP Atrium 16",
         "product_image": "https://i.ibb.co.com/cgWkPY3/DALL-E-2024-11-04-03-49-15-HP-Pavilion-14-laptop-on-a-minimal-background-with-a-sleek-metallic-silve.webp",
         "category": "laptop",
-        "price": 599,
+        "price": 600,
         "description": "Lightweight laptop with Intel Core i5 processor.",
         "Specification": [
             "14 inch Full HD",

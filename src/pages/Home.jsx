@@ -23,7 +23,7 @@ const Home = () => {
                     <div className="w-3/4">
 
                         <Outlet></Outlet>
-
+                        
                     </div>
 
                 </div>
