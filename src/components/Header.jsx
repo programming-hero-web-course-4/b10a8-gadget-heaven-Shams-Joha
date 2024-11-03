@@ -2,9 +2,9 @@
 
 const Header = ({ title, description, className }) => {
     return (
-        <div>
+        <div className="flex flex-col items-center gap-5 p-10">
             <h1 className={className}>{title}</h1>
-            <p>{description}</p>
+            <p className="text-white w-1/3 text-center">{description}</p>
         </div>
     );
 };

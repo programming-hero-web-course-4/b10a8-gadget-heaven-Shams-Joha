@@ -4,14 +4,14 @@ import Banner from './Banner';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='mt-10'>
             {/* Navbar */}
-            <div className="navbar bg-base-100 container mx-auto mt-5 flex justify-between">
+            <div className="navbar bg-transparent container mx-auto  flex justify-between sticky z-100">
                 <div>
-                    <Link className='text-xl font-bold' to='/'>Gadget Heaven</Link>
+                    <Link className='text-xl font-bold text-white' to='/'>Gadget Heaven</Link>
                 </div>
                 <div>
-                    <ul className='flex gap-6'>
+                    <ul className='flex gap-6 text-white text-lg'>
                         <li><NavLink>Home</NavLink></li>
                         <li><NavLink>Statistics</NavLink></li>
                         <li><NavLink>Dashboard</NavLink></li>
@@ -19,10 +19,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {/* Cart & Wishlist Icon */}
-                <div className="flex-none">
+                <div className="flex gap-4">
                     {/* Cart Icon */}
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white border border-gray-300">
                             {/* Number */}
                             <div className="indicator">
                                 <svg
@@ -54,7 +54,7 @@ const Navbar = () => {
                     </div>
                     {/* WishList Icon */}
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white border border-gray-300">
                             {/* Number */}
                             <div className="indicator">
                                 <img className='w-4' src={love}></img>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Banner */}
-            <Banner></Banner>
+
         </div>
 
     );
