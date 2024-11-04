@@ -13,6 +13,7 @@ import Statistics from './pages/Statistics.jsx';
 import Onsale from './pages/Onsale.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import AllProducts from './components/AllProducts.jsx';
+import Details from './pages/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <Dashboard></Dashboard>
+      },
+      {
+        path: '/product/:id',
+        element: <Details></Details>,
+        loader: () => fetch('../public/products.json')
       }
     ]
   },
