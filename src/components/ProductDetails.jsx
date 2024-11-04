@@ -5,6 +5,9 @@ import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
 
 import { Rating, ThinStar } from '@smastrom/react-rating'
+import { addToCart } from '../utils';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Declare it outside your component so it doesn't get re-created
 const myStyles = {
@@ -20,7 +23,11 @@ const ProductDetails = ({ product }) => {
 
     const { product_title, product_image, category, price, description, Specification = [], availability, rating } = product;
     const hold = parseInt(rating);
-  
+
+    const handleCart = (product) => {
+        addToCart(product);
+
+    }
 
 
 
@@ -60,22 +67,36 @@ const ProductDetails = ({ product }) => {
 
                         {
 
-                            <Rating style={{ maxWidth: 150 }} value={hold}  itemStyles={myStyles} ></Rating>
+                            <Rating style={{ maxWidth: 150 }} value={hold} itemStyles={myStyles} ></Rating>
                         }
                         <span className="p-1 bg-gray-100 rounded-2xl text-xs">{rating}</span>
                     </div>
 
                     <div className="flex gap-3">
-                        <button className="btn bg-[#9538E2] rounded-full text-white">
+                        <button onClick={() => { handleCart(product) }} className="btn bg-[#9538E2] rounded-full text-white">
                             Add to Cart <IoCartOutline size={20} />
                         </button>
                         <button className="p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-300">
 
                             <CiHeart size={20} />
                         </button>
+                        <button onClick={() => {
+                            toast('🦄 Wow so easy!', {
+                                position: "top-right",
+                                autoClose: 5000,
+                                hideProgressBar: false,
+                                closeOnClick: true,
+                                pauseOnHover: true,
+                                draggable: true,
+                                progress: undefined,
+                                theme: "dark",
+                                transition: Bounce,
+                            });
+                        }}>Toast</button>
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div >
     );
 };
