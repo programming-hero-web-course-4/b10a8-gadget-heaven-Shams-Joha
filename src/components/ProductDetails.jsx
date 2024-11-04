@@ -19,9 +19,8 @@ const myStyles = {
 const ProductDetails = ({ product }) => {
 
     const { product_title, product_image, category, price, description, Specification = [], availability, rating } = product;
-    const [rating1, setRating] = useState(() => Math.round(rating));
-
-
+    const hold = parseInt(rating);
+  
 
 
 
@@ -61,7 +60,7 @@ const ProductDetails = ({ product }) => {
 
                         {
 
-                            <Rating style={{ maxWidth: 150 }} value={rating1} onChange={setRating} itemStyles={myStyles} >{console.log('Rating component rendered')}</Rating>
+                            <Rating style={{ maxWidth: 150 }} value={hold}  itemStyles={myStyles} ></Rating>
                         }
                         <span className="p-1 bg-gray-100 rounded-2xl text-xs">{rating}</span>
                     </div>
