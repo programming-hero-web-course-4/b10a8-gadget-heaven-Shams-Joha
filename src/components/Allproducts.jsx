@@ -8,7 +8,7 @@ const AllProducts = () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-3 gap-5 mb-8">
             {
                 data.map(product => <Products key={product.product_id} data={product}></Products>)
             }

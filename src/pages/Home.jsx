@@ -12,18 +12,18 @@ const Home = () => {
             <Banner></Banner>
             <h2 className="text-2xl font-bold mb-8 text-center">Explore Cutting-Edge Gadgets</h2>
 
-            <div className="container">
-                <div className="flex">
+            <div className="container mx-auto">
+                <div className="grid grid-cols-5 gap-5">
                     {/* Category Column */}
-                    <div className="w-1/4">
+                    <div className="col-span-1 px-5">
                         <Categories categoryData={categoryData}></Categories>
                     </div>
 
                     {/* Products Column */}
-                    <div className="w-3/4">
+                    <div className="col-span-4">
 
                         <Outlet></Outlet>
-                        
+
                     </div>
 
                 </div>

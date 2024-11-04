@@ -19,17 +19,17 @@ const Products = ({ data }) => {
 
 
     return (
-        <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card bg-base-100  shadow-xl p-5">
             <figure>
-                <img
+                <img className="w-80 h-60 rounded-2xl"
                     src={product_image}
                     alt="Product Image" />
             </figure>
-            <div className="card-body">
+            <div className="flex-col items-start justify-between pt-2 space-y-3">
                 <h2 className="card-title">{product_title}</h2>
-                <p>{price}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                <p>Price: {price} tk</p>
+                <div className="card-actions justify-start">
+                    <button className="btn border border-[#9538E2] rounded-full bg-white text-[#9538E2]">View Details</button>
                 </div>
             </div>
         </div>
