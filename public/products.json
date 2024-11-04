@@ -3,7 +3,7 @@
         "product_id": "1",
         "product_title": "Acer Aspire 5",
         "product_image": "https://i.ibb.co.com/NLhLzmP/DALL-E-2024-11-04-03-49-12-Acer-Aspire-5-laptop-on-a-minimal-background-with-sleek-silver-design-ope.webp",
-        "category": "laptop",
+        "category": "Laptops",
         "price": 549,
         "description": "Powerful and portable laptop with AMD Ryzen processor.",
         "Specification": [
@@ -19,7 +19,7 @@
         "product_id": "2",
         "product_title": "Dell Inspiron 15",
         "product_image": "https://i.ibb.co.com/TBcKXtY/DALL-E-2024-11-04-03-49-13-Dell-Inspiron-15-laptop-on-a-minimal-background-featuring-a-sleek-silver.webp",
-        "category": "laptop",
+        "category": "Laptops",
         "price": 699,
         "description": "High-performance laptop with Intel Core i7 processor.",
         "Specification": [
@@ -35,7 +35,7 @@
         "product_id": "3",
         "product_title": "HP Pavilion 14",
         "product_image": "https://i.ibb.co.com/cgWkPY3/DALL-E-2024-11-04-03-49-15-HP-Pavilion-14-laptop-on-a-minimal-background-with-a-sleek-metallic-silve.webp",
-        "category": "laptop",
+        "category": "Laptops",
         "price": 599,
         "description": "Lightweight laptop with Intel Core i5 processor.",
         "Specification": [
@@ -51,7 +51,7 @@
         "product_id": "4",
         "product_title": "HP Atrium 16",
         "product_image": "https://i.ibb.co.com/cgWkPY3/DALL-E-2024-11-04-03-49-15-HP-Pavilion-14-laptop-on-a-minimal-background-with-a-sleek-metallic-silve.webp",
-        "category": "laptop",
+        "category": "Laptops",
         "price": 600,
         "description": "Lightweight laptop with Intel Core i5 processor.",
         "Specification": [
@@ -67,7 +67,7 @@
         "product_id": "5",
         "product_title": "Asus ZenBook 14",
         "product_image": "https://i.ibb.co.com/X53N6wf/DALL-E-2024-11-04-03-55-05-A-sleek-lightweight-Asus-Zen-Book-14-laptop-displayed-on-a-modern-desk-se.webp",
-        "category": "laptop",
+        "category": "Laptops",
         "price": 849,
         "description": "Ultra-slim laptop with OLED display and Intel Core i7 processor.",
         "Specification": [
@@ -83,7 +83,7 @@
         "product_id": "6",
         "product_title": "MacBook Air M1",
         "product_image": "https://i.ibb.co.com/Lh8tqjb/DALL-E-2024-11-04-03-46-12-A-realistic-image-of-a-modern-Apple-Mac-Book-Air-M1-laptop-with-a-13-3-in.webp",
-        "category": "laptop",
+        "category": "MacBook",
         "price": 999,
         "description": "Apple's thin and powerful MacBook Air with M1 chip.",
         "Specification": [
@@ -99,7 +99,7 @@
         "product_id": "7",
         "product_title": "iPhone 14 Pro",
         "product_image": "https://i.ibb.co.com/VDrmZVq/DALL-E-2024-11-04-03-46-15-A-high-quality-image-of-an-i-Phone-14-Pro-smartphone-in-a-modern-setting.webp",
-        "category": "iphone",
+        "category": "Iphone",
         "price": 1099,
         "description": "The latest iPhone with a powerful A16 Bionic chip and Pro camera system.",
         "Specification": [
@@ -115,7 +115,7 @@
         "product_id": "8",
         "product_title": "Samsung Galaxy S22",
         "product_image": "https://i.ibb.co.com/MgHDnDS/DALL-E-2024-11-04-03-46-16-A-professional-image-of-Samsung-Galaxy-S22-smartphone-in-an-elegant-indoo.webp",
-        "category": "phone",
+        "category": "Phones",
         "price": 799,
         "description": "High-performance Android phone with stunning display and camera.",
         "Specification": [
@@ -131,7 +131,7 @@
         "product_id": "9",
         "product_title": "Apple Watch Series 8",
         "product_image": "https://i.ibb.co.com/2FSKpv1/DALL-E-2024-11-04-03-54-45-A-sleek-modern-Apple-Watch-Series-8-with-a-stainless-steel-case-and-custo.webp",
-        "category": "smartwatches",
+        "category": "Smart Watches",
         "price": 399,
         "description": "Advanced smartwatch with fitness tracking and health features.",
         "Specification": [
@@ -147,7 +147,7 @@
         "product_id": "10",
         "product_title": "JBL Wireless Earbuds",
         "product_image": "https://i.ibb.co.com/zZb4HbH/DALL-E-2024-11-04-03-54-54-Close-up-of-a-pair-of-JBL-wireless-earbuds-in-a-stylish-black-color-with.webp",
-        "category": "accessories",
+        "category": "Accessories",
         "price": 129,
         "description": "High-quality wireless earbuds with noise cancellation.",
         "Specification": [
@@ -158,5 +158,101 @@
         ],
         "availability": true,
         "rating": 4.4
+    },
+    {
+        "product_id": "11",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/NLhLzmP/DALL-E-2024-11-04-03-49-12-Acer-Aspire-5-laptop-on-a-minimal-background-with-sleek-silver-design-ope.webp",
+        "category": "Laptops",
+        "price": 1250,
+        "description": "Ultra-lightweight business laptop with Intel Core i7 processor.",
+        "Specification": [
+            "14 inch Full HD",
+            "16GB RAM",
+            "512GB SSD",
+            "Intel Core i7"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "12",
+        "product_title": "Google Pixel 6",
+        "product_image": "https://i.ibb.co.com/MgHDnDS/DALL-E-2024-11-04-03-46-16-A-professional-image-of-Samsung-Galaxy-S22-smartphone-in-an-elegant-indoo.webp",
+        "category": "Phones",
+        "price": 599,
+        "description": "Google's flagship phone with a powerful Tensor chip and advanced camera.",
+        "Specification": [
+            "6.4 inch AMOLED",
+            "128GB storage",
+            "Google Tensor chip",
+            "Dual-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "13",
+        "product_title": "Sony WH-1000XM5 Wireless Headphones",
+        "product_image": "https://i.ibb.co.com/zZb4HbH/DALL-E-2024-11-04-03-54-54-Close-up-of-a-pair-of-JBL-wireless-earbuds-in-a-stylish-black-color-with.webp",
+        "category": "Accessories",
+        "price": 299,
+        "description": "Premium noise-canceling headphones with long battery life.",
+        "Specification": [
+            "Noise Cancelling",
+            "Bluetooth 5.2",
+            "30-hour battery life",
+            "Quick Charging"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "14",
+        "product_title": "Garmin Venu 2",
+        "product_image": "https://i.ibb.co.com/2FSKpv1/DALL-E-2024-11-04-03-54-45-A-sleek-modern-Apple-Watch-Series-8-with-a-stainless-steel-case-and-custo.webp",
+        "category": "Smart Watches",
+        "price": 349,
+        "description": "Advanced fitness smartwatch with GPS and health monitoring.",
+        "Specification": [
+            "45mm AMOLED display",
+            "GPS",
+            "Heart Rate Monitor",
+            "Stress Tracking"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "15",
+        "product_title": "MacBook Pro M1",
+        "product_image": "https://i.ibb.co.com/Lh8tqjb/DALL-E-2024-11-04-03-46-12-A-realistic-image-of-a-modern-Apple-Mac-Book-Air-M1-laptop-with-a-13-3-in.webp",
+        "category": "MacBook",
+        "price": 1299,
+        "description": "Powerful MacBook Pro with Apple's M1 chip for high performance.",
+        "Specification": [
+            "13.3 inch Retina",
+            "8GB RAM",
+            "512GB SSD",
+            "Apple M1 chip"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "16",
+        "product_title": "iPhone 13",
+        "product_image": "https://i.ibb.co.com/VDrmZVq/DALL-E-2024-11-04-03-46-15-A-high-quality-image-of-an-i-Phone-14-Pro-smartphone-in-a-modern-setting.webp",
+        "category": "Iphone",
+        "price": 899,
+        "description": "Reliable iPhone with A15 Bionic chip and excellent camera quality.",
+        "Specification": [
+            "6.1 inch Super Retina XDR",
+            "128GB storage",
+            "A15 Bionic chip",
+            "Dual-lens camera"
+        ],
+        "availability": true,
+        "rating": 4.8
     }
 ]

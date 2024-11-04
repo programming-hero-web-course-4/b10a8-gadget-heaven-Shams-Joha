@@ -11,10 +11,10 @@ const Navbar = () => {
                     <Link className='text-xl font-bold text-white' to='/'>Gadget Heaven</Link>
                 </div>
                 <div>
-                    <ul className='flex gap-6  text-lg'>
+                    <ul className='flex gap-6  text-base'>
                         <NavLink
                             className={({ isActive }) =>
-                                `font-bold ${isActive ? 'text-red-500' : 'hover:text-gray-500'}`
+                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
                             }
                             to='/'
                         >
@@ -22,7 +22,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                                ` ${isActive ? 'text-white font-bold underline' : ' text-white'}`
                             }
                             to='/statistics'
                         >
@@ -30,7 +30,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
                             }
                             to='/dashboard'
                         >
@@ -38,7 +38,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                `font-bold ${isActive ? 'text-green-400' : 'hover:text-gray-500'}`
+                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
                             }
                             to='/onsale'
                         >
