@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-
+import ErrorPage from './error-page.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Mainlayout></Mainlayout>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

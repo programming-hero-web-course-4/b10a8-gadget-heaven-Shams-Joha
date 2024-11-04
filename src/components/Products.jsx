@@ -27,7 +27,7 @@ const Products = ({ data }) => {
             </figure>
             <div className="flex-col items-start justify-between pt-2 space-y-3">
                 <h2 className="card-title">{product_title}</h2>
-                <p>Price: {price} tk</p>
+                <p>Price: {price} $</p>
                 <div className="card-actions justify-start">
                     <button className="btn border border-[#9538E2] rounded-full bg-white text-[#9538E2]">View Details</button>
                 </div>
