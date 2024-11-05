@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <div className='mt-10'>
             {/* Navbar */}
-            <div className={`navbar ${bgColor} container mx-auto flex justify-between relative z-10`}>
+            <div className={`navbar ${bgColor} ${location.pathname === '/' ? 'container mx-auto' : 'w-full'} px-10 flex justify-between relative z-10`}>
                 <div>
                     <Link className={`text-xl font-bold ${textColor}`} to='/'>Gadget Heaven</Link>
                 </div>
