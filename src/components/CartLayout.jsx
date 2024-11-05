@@ -45,18 +45,16 @@ const CartLayout = () => {
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box flex flex-col items-center justify-between gap-3">
                     <img src={modalImg} alt="" />
-                    <h3 className="font-bold  text-2xl">Payment Successfully</h3>
-                    <div className="border-b-2">
-
-                    </div>
+                    <h3 className="font-bold pb-6  text-2xl border-b-2">Payment Successfully</h3>
+                
 
                     <p className="py-4">Thanks for purchasing</p>
                     <p className="py-4">Total: {totalPrice}</p>
 
-                    <div className="modal-action">
+                    <div className="">
                         <form method="">
                             {/* if there is a button in form, it will close the modal */}
-                            <button className="btn">Close</button>
+                            <button className="btn w-full">Close</button>
                         </form>
                     </div>
                 </div>
