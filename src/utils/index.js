@@ -10,6 +10,16 @@ const getPrevItems = () => {
     }
 }
 
+const getPrevList = () => {
+    const all = localStorage.getItem('wishlist');
+    if (all) {
+        const convert = JSON.parse(all);
+        return convert;
+    } else {
+        return [];
+    }
+}
+
 
 const addToCart = (product) => {
     const cart = getPrevItems();
@@ -26,4 +36,19 @@ const addToCart = (product) => {
 
 }
 
-export { addToCart, getPrevItems };
+const addToWishList = (product) => {
+    const wish = getPrevList();
+    const isExist = wish.find(each => each.product_id == product.product_id);
+    if (isExist) {
+        return toast.warn('Item Already Exists in the WishList')
+    }
+    else {
+        toast.success('Product Added to WishList')
+        wish.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(wish));
+    }
+
+
+}
+
+export { addToCart, getPrevItems, getPrevList, addToWishList };

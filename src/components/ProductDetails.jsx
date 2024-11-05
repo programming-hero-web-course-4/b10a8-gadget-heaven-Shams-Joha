@@ -2,10 +2,11 @@
 import '@smastrom/react-rating/style.css'
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Rating, ThinStar } from '@smastrom/react-rating'
-import { addToCart } from '../utils';
+import { addToCart, addToWishList, getPrevList } from '../utils';
 import { useCart } from '../../context/HandleContext';
+import { useParams } from 'react-router-dom';
 
 
 
@@ -20,11 +21,22 @@ const myStyles = {
 
 
 const ProductDetails = ({ product }) => {
-    const { updateCartAmount } = useCart();
+
+
+    const { updateCartAmount, updateWishListAmount } = useCart();
+    const [isAddedToList, setIsAddedToList] = useState(false);
 
     const { product_title, product_image, category, price, description, Specification = [], availability, rating } = product;
     const hold = parseInt(rating);
+    const { id } = useParams();
 
+    useEffect(() => {
+        const wishData = getPrevList();
+        const isExist = wishData.find(each => parseInt(each.product_id) === parseInt(product.id));
+        if (isExist) {
+            setIsAddedToList(true);
+        }
+    }, [getPrevList, id])
 
 
     const handleCart = (product) => {
@@ -34,6 +46,13 @@ const ProductDetails = ({ product }) => {
 
 
     };
+    const handleWishList = (product) => {
+        addToWishList(product);
+        updateWishListAmount();
+        setIsAddedToList(true);
+        console.log(isAddedToList);
+
+    }
 
     return (
         <div className="bg-white rounded-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-48 container">
@@ -80,7 +99,7 @@ const ProductDetails = ({ product }) => {
                         <button onClick={() => { handleCart(product) }} className="btn bg-[#9538E2] rounded-full text-white">
                             Add to Cart <IoCartOutline size={20} />
                         </button>
-                        <button className="p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-300">
+                        <button disabled={isAddedToList} onClick={() => { handleWishList(product) }} className=" btn p-3 rounded-full bg-white border border-gray-300 hover:bg-gray-300">
 
                             <CiHeart size={20} />
                         </button>

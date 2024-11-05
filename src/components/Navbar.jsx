@@ -7,7 +7,7 @@ import { useCart } from '../../context/HandleContext';
 
 const Navbar = () => {
 
-    const { cartAmount } = useCart();
+    const { cartAmount, wishListAmount } = useCart();
     return (
         <div className='mt-10'>
             {/* Navbar */}
@@ -93,7 +93,7 @@ const Navbar = () => {
                             {/* Number */}
                             <div className="indicator">
                                 <img className='w-4' src={love}></img>
-                                <span className="badge badge-sm indicator-item">8</span>
+                                <span className="badge badge-sm indicator-item">{wishListAmount}</span>
                             </div>
                         </div>
 
