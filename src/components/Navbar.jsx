@@ -1,32 +1,74 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import love from '../assets/like.png';
 import { useCart } from '../../context/HandleContext';
+import { Helmet } from 'react-helmet-async';
 
 const Navbar = () => {
     const location = useLocation();
 
-    // Background and Text Color
+    // Background and Text Color and page title
+    let pageTitle
     let bgColor;
     let textColor;
     switch (location.pathname) {
         case '/dashboard':
             bgColor = 'bg-white';
             textColor = 'text-black';
+            pageTitle = 'Dashboard - Gadget Heaven';
             break;
         case '/statistics':
             bgColor = 'bg-white';
             textColor = 'text-black';
+            pageTitle = 'Statistics - Gadget Heaven';
             break;
         case '/':
             bgColor = 'bg-transparent';
             textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/MacBook':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/Accessories':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/Laptops':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/Phones':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/All%20Product':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/Iphone':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
+            break;
+        case '/category/Smart%20Watches':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            pageTitle = 'Home - Gadget Heaven';
             break;
         case '/onsale':
             bgColor = 'bg-white';
             textColor = 'text-black';
+            pageTitle = 'On Sale - Gadget Heaven';
             break;
         default:
-            bgColor = 'bg-gray-800';
+            pageTitle = 'Gadget Heaven';
+            bgColor = 'bg-white';
             textColor = 'text-black';
     }
 
@@ -34,8 +76,12 @@ const Navbar = () => {
 
     return (
         <div className='mt-10'>
+            <Helmet>
+                <title>{pageTitle}</title>
+                <meta name="description" content={`You are in ${pageTitle}`} />
+            </Helmet>
             {/* Navbar */}
-            <div className={`navbar ${bgColor} ${location.pathname === '/' ? 'container mx-auto' : 'w-full'} px-10 flex justify-between relative z-10`}>
+            <div className={`navbar ${bgColor} ${location.pathname === '/' ? 'container mx-auto' : 'w-full'} px-20 flex justify-between relative z-10 items-center`}>
                 <div>
                     <Link className={`text-xl font-bold ${textColor}`} to='/'>Gadget Heaven</Link>
                 </div>

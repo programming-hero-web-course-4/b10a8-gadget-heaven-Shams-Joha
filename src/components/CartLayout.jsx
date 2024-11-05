@@ -2,7 +2,7 @@ import { TbSortAscendingShapes } from "react-icons/tb";
 import { getPrevItems } from "../utils";
 import CartItem from "./CartItem";
 import { useEffect, useState } from "react";
-
+import modalImg from "../assets/Group.png"
 const CartLayout = () => {
     const cartData = getPrevItems();
     const [data, setData] = useState(cartData);
@@ -14,6 +14,13 @@ const CartLayout = () => {
         const sortedData = [...cartData].sort((a, b) => b.price - a.price)
         setData(sortedData);
     }
+    const handleModal = () => {
+        {/* Open the modal using document.getElementById('ID').showModal() method */ }
+        {
+            document.getElementById('my_modal_1').showModal()
+        }
+
+    }
 
     return (
         <div className="container my-10 mx-auto">
@@ -23,7 +30,7 @@ const CartLayout = () => {
                     <p className="font-bold text-lg">Total Cost: {totalPrice}</p>
                     <button onClick={handleSort} className="font-bold border border-violet-500 text-violet-500 rounded-full btn">Sort by Price <TbSortAscendingShapes size={20} /></button>
                     {/* Show Modal On Click */}
-                    <button className="btn rounded-full text-white bg-violet-500 font-bold">Purchase</button>
+                    <button onClick={handleModal} className="btn rounded-full text-white bg-violet-500 font-bold">Purchase</button>
                 </div>
 
             </div>
@@ -33,6 +40,27 @@ const CartLayout = () => {
                     data.map(item => <CartItem product={item} key={item.product_id}></CartItem>)
                 }
             </div>
+            {/* Modal */}
+
+            <dialog id="my_modal_1" className="modal">
+                <div className="modal-box flex flex-col items-center justify-between gap-3">
+                    <img src={modalImg} alt="" />
+                    <h3 className="font-bold  text-2xl">Payment Successfully</h3>
+                    <div className="border-b-2">
+
+                    </div>
+
+                    <p className="py-4">Thanks for purchasing</p>
+                    <p className="py-4">Total: {totalPrice}</p>
+
+                    <div className="modal-action">
+                        <form method="">
+                            {/* if there is a button in form, it will close the modal */}
+                            <button className="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div>
     );
 };

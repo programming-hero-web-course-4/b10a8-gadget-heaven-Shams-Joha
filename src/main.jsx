@@ -18,7 +18,7 @@ import { CartProvider } from '../context/HandleContext.jsx';
 import CartLayout from './components/CartLayout.jsx';
 import WishLayout from './pages/WishLayout.jsx';
 import Products from './components/Products.jsx';
-
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
         path: 'onsale',
         element: <Onsale></Onsale>,
         loader: () => fetch('../public/products.json')
-        
+
       },
       {
         path: 'dashboard',
@@ -83,9 +83,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CartProvider>
-      <RouterProvider router={router} />
-    </CartProvider>
+    <HelmetProvider>
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
+    </HelmetProvider>
+
 
   </StrictMode>,
 )
