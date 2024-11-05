@@ -17,6 +17,7 @@ import Details from './pages/Details.jsx';
 import { CartProvider } from '../context/HandleContext.jsx';
 import CartLayout from './components/CartLayout.jsx';
 import WishLayout from './pages/WishLayout.jsx';
+import Products from './components/Products.jsx';
 
 
 const router = createBrowserRouter([
@@ -49,14 +50,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'onsale',
-        element: <Onsale></Onsale>
+        element: <Onsale></Onsale>,
+        loader: () => fetch('../public/products.json')
+        
       },
       {
         path: 'dashboard',
         element: <Dashboard></Dashboard>,
         children: [
           {
-            index:true,
+            index: true,
             element: <CartLayout></CartLayout>
           },
           {
