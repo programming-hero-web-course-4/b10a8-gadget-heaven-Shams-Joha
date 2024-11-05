@@ -14,6 +14,8 @@ import Onsale from './pages/Onsale.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import AllProducts from './components/AllProducts.jsx';
 import Details from './pages/Details.jsx';
+import { CartProvider } from '../context/HandleContext.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+
   </StrictMode>,
 )

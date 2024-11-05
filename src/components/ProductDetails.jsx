@@ -3,11 +3,11 @@ import '@smastrom/react-rating/style.css'
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { useState } from 'react';
-
 import { Rating, ThinStar } from '@smastrom/react-rating'
 import { addToCart } from '../utils';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useCart } from '../../context/HandleContext';
+
+
 
 // Declare it outside your component so it doesn't get re-created
 const myStyles = {
@@ -20,20 +20,24 @@ const myStyles = {
 
 
 const ProductDetails = ({ product }) => {
+    const { updateCartAmount } = useCart();
 
     const { product_title, product_image, category, price, description, Specification = [], availability, rating } = product;
     const hold = parseInt(rating);
 
+
+
     const handleCart = (product) => {
+
         addToCart(product);
-
-    }
-
+        updateCartAmount();
 
 
+    };
 
     return (
         <div className="bg-white rounded-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-48 container">
+
             <div className="flex gap-10 p-5 justify-between">
                 <div className="w-2/5">
                     <img
@@ -80,23 +84,12 @@ const ProductDetails = ({ product }) => {
 
                             <CiHeart size={20} />
                         </button>
-                        <button onClick={() => {
-                            toast('🦄 Wow so easy!', {
-                                position: "top-right",
-                                autoClose: 5000,
-                                hideProgressBar: false,
-                                closeOnClick: true,
-                                pauseOnHover: true,
-                                draggable: true,
-                                progress: undefined,
-                                theme: "dark",
-                                transition: Bounce,
-                            });
-                        }}>Toast</button>
+                        <span></span>
+
                     </div>
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
+
         </div >
     );
 };
