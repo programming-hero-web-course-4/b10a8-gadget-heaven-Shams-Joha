@@ -15,6 +15,8 @@ import Dashboard from './pages/Dashboard.jsx';
 import AllProducts from './components/AllProducts.jsx';
 import Details from './pages/Details.jsx';
 import { CartProvider } from '../context/HandleContext.jsx';
+import CartLayout from './components/CartLayout.jsx';
+import WishLayout from './pages/WishLayout.jsx';
 
 
 const router = createBrowserRouter([
@@ -51,7 +53,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: 'cart',
+            element: <CartLayout></CartLayout>
+          },
+          {
+            path: 'wishlist',
+            element: <WishLayout></WishLayout>
+          }
+        ]
       },
       {
         path: '/product/:id',
