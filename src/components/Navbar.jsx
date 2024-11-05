@@ -1,25 +1,49 @@
-import { Link, NavLink } from 'react-router-dom';
-import love from '../assets/like.png'
-import Banner from './Banner';
-import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import love from '../assets/like.png';
 import { useCart } from '../../context/HandleContext';
 
-
 const Navbar = () => {
+    const location = useLocation();
+
+    // Background and Text Color
+    let bgColor;
+    let textColor;
+    switch (location.pathname) {
+        case '/dashboard':
+            bgColor = 'bg-white';
+            textColor = 'text-black';
+            break;
+        case '/statistics':
+            bgColor = 'bg-white';
+            textColor = 'text-black';
+            break;
+        case '/':
+            bgColor = 'bg-transparent';
+            textColor = 'text-white';
+            break;
+        case '/onsale':
+            bgColor = 'bg-white';
+            textColor = 'text-black';
+            break;
+        default:
+            bgColor = 'bg-gray-800';
+            textColor = 'text-black';
+    }
 
     const { cartAmount, wishListAmount } = useCart();
+
     return (
         <div className='mt-10'>
             {/* Navbar */}
-            <div className="navbar bg-transparent container mx-auto  flex justify-between relative z-10 ">
+            <div className={`navbar ${bgColor} container mx-auto flex justify-between relative z-10`}>
                 <div>
-                    <Link className='text-xl font-bold text-white' to='/'>Gadget Heaven</Link>
+                    <Link className={`text-xl font-bold ${textColor}`} to='/'>Gadget Heaven</Link>
                 </div>
                 <div>
-                    <ul className='flex gap-6  text-base'>
+                    <ul className='flex gap-6 text-base'>
                         <NavLink
                             className={({ isActive }) =>
-                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
+                                `${isActive ? `${textColor} font-bold underline` : textColor}`
                             }
                             to='/'
                         >
@@ -27,7 +51,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                ` ${isActive ? 'text-white font-bold underline' : ' text-white'}`
+                                `${isActive ? `${textColor} font-bold underline` : textColor}`
                             }
                             to='/statistics'
                         >
@@ -35,7 +59,7 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
+                                `${isActive ? `${textColor} font-bold underline` : textColor}`
                             }
                             to='/dashboard'
                         >
@@ -43,14 +67,12 @@ const Navbar = () => {
                         </NavLink>
                         <NavLink
                             className={({ isActive }) =>
-                                ` ${isActive ? 'text-white font-bold underline' : 'text-white'}`
+                                `${isActive ? `${textColor} font-bold underline` : textColor}`
                             }
                             to='/onsale'
                         >
                             On Sale
                         </NavLink>
-
-
                     </ul>
                 </div>
                 {/* Cart & Wishlist Icon */}
@@ -92,11 +114,10 @@ const Navbar = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white border border-gray-300">
                             {/* Number */}
                             <div className="indicator">
-                                <img className='w-4' src={love}></img>
+                                <img className='w-4' src={love} alt="Wishlist Icon" />
                                 <span className="badge badge-sm indicator-item">{wishListAmount}</span>
                             </div>
                         </div>
-
                         <div
                             tabIndex={0}
                             className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
@@ -109,13 +130,9 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            {/* Banner */}
-
         </div>
-
     );
 };
 
