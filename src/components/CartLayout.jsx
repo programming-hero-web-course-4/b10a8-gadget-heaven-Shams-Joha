@@ -45,8 +45,8 @@ const CartLayout = () => {
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box flex flex-col items-center justify-between gap-3">
                     <img src={modalImg} alt="" />
-                    <h3 className="font-bold pb-6  text-2xl border-b-2">Payment Successfully</h3>
-                
+                    <h3 className="font-bold pb-6  text-2xl border-b-2">Payment Successfull</h3>
+
 
                     <p className="py-4">Thanks for purchasing</p>
                     <p className="py-4">Total: {totalPrice}</p>
