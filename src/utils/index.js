@@ -20,6 +20,10 @@ const getPrevList = () => {
     }
 }
 
+const clearCart = () => {
+    localStorage.removeItem('cart');
+}
+
 
 const addToCart = (product) => {
     const cart = getPrevItems();
@@ -51,4 +55,4 @@ const addToWishList = (product) => {
 
 }
 
-export { addToCart, getPrevItems, getPrevList, addToWishList };
+export { addToCart, getPrevItems, getPrevList, addToWishList, clearCart };

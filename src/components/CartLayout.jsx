@@ -1,9 +1,23 @@
 import { TbSortAscendingShapes } from "react-icons/tb";
-import { getPrevItems } from "../utils";
+import { clearCart, getPrevItems } from "../utils";
 import CartItem from "./CartItem";
 import { useEffect, useState } from "react";
 import modalImg from "../assets/Group.png"
+import { useNavigate } from "react-router-dom";
+import { useCart } from '../../context/HandleContext';
+
+
+
 const CartLayout = () => {
+    const { updateCartAmount } = useCart();
+    const navigate = useNavigate();
+    
+    const handleClick = () => {
+        navigate('/');
+        clearCart();
+        updateCartAmount();
+
+    }
     const cartData = getPrevItems();
     const [data, setData] = useState(cartData);
     let totalPrice = 0;
@@ -51,11 +65,11 @@ const CartLayout = () => {
                     <p className="py-4">Thanks for purchasing</p>
                     <p className="py-4">Total: {totalPrice}</p>
 
-                    <div className="">
-                        <form method="">
-                            {/* if there is a button in form, it will close the modal */}
-                            <button className="btn w-full">Close</button>
-                        </form>
+                    <div className="w-full">
+
+                        {/* if there is a button in form, it will close the modal */}
+                        <button onClick={handleClick} className="btn w-full rounded-2xl">Close</button>
+
                     </div>
                 </div>
             </dialog>

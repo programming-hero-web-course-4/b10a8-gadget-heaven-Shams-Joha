@@ -50,7 +50,7 @@ const ProductDetails = ({ product }) => {
         addToWishList(product);
         updateWishListAmount();
         setIsAddedToList(true);
-        console.log(isAddedToList);
+        
 
     }
 

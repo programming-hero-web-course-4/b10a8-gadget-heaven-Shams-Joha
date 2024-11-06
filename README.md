@@ -2,7 +2,7 @@
 [🚀 Live Website](#) <!-- Add your live website link here -->
 
 ## 📄 Requirement Document
-<!-- Link your requirement document if available -->
+https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
 
 ## 🌟 Overview
 Welcome to **Gadget Heaven** — your go-to platform for browsing, categorizing, and managing tech gadgets with ease! This project showcases essential React concepts to deliver a dynamic, user-friendly shopping experience.
