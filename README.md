@@ -1,5 +1,5 @@
 # 🌌 Gadget Heaven
-[🚀 Live Website](#) [(https://nervous-disease.surge.sh/)]
+[🚀 Live Website](#) [(https://like-song.surge.sh/)]
 
 ## 📄 Requirement Document
 https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
