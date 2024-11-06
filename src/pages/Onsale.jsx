@@ -36,10 +36,10 @@ const Onsale = () => {
                         </div>
                     </div>
                 </div>
-
+                
                 <div className="grid grid-cols-3 gap-5">
                     {
-                        hold.map(product => <div key={product.product_id} className="indicator">
+                        hold.length > 0 && hold.map(product => <div key={product.product_id} className="indicator">
                             <span className=" text-xl p-2 indicator-item badge badge-primary">new</span>
                             <div className="bg-base-300 grid  place-items-center"><Products data={product}></Products></div>
                         </div>)

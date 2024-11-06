@@ -50,7 +50,7 @@ const ProductDetails = ({ product }) => {
         addToWishList(product);
         updateWishListAmount();
         setIsAddedToList(true);
-        
+
 
     }
 
@@ -79,7 +79,7 @@ const ProductDetails = ({ product }) => {
                     <div className='py-2 space-y-2'>
                         <p className='font-bold'>Specification:</p>
                         <ul className="text-gray-500 text-sm">
-                            {Specification.map((item, index) => (
+                            {Specification.length > 0 && Specification.map((item, index) => (
                                 <li key={index}>{`${index + 1}. ${item}`}</li>
                             ))}
                         </ul>

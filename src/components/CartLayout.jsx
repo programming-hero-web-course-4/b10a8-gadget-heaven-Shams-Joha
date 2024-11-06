@@ -65,9 +65,10 @@ const CartLayout = () => {
 
             </div>
             {/* Cart Products */}
+            
             <div>
                 {
-                    data.map(item => <CartItem product={item} key={item.product_id}></CartItem>)
+                    data.length > 0 && data.map(item => <CartItem product={item} key={item.product_id}></CartItem>)
                 }
             </div>
             {/* Modal */}

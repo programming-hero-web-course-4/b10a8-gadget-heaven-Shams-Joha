@@ -10,9 +10,10 @@ const WishLayout = () => {
                 <div><h2 className="font-bold text-lg">WishList</h2></div>
             </div>
             {/* Cart Products */}
+
             <div>
                 {
-                    data.map(item => <CartItem product={item} key={item.product_id} showButton={true}></CartItem>)
+                    data.length > 0 && data.map(item => <CartItem product={item} key={item.product_id} showButton={true}></CartItem>)
                 }
             </div>
         </div>

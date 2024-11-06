@@ -12,7 +12,7 @@ import Home from './pages/Home.jsx';
 import Statistics from './pages/Statistics.jsx';
 import Onsale from './pages/Onsale.jsx';
 import Dashboard from './pages/Dashboard.jsx';
-import AllProducts from './components/AllProducts.jsx';
+import AllProducts from './components/Allproducts.jsx';
 import Details from './pages/Details.jsx';
 import { CartProvider } from '../context/HandleContext.jsx';
 import CartLayout from './components/CartLayout.jsx';
@@ -33,15 +33,15 @@ const router = createBrowserRouter([
           {
             path: '/category/:category',
             element: <AllProducts></AllProducts>,
-            loader: () => fetch('../public/products.json')
+            loader: () => fetch('/products.json')
           },
           {
             path: '/',
             element: <AllProducts></AllProducts>,
-            loader: () => fetch('../public/products.json')
+            loader: () => fetch('/products.json')
           }
         ],
-        loader: () => fetch('../public/categories.json')
+        loader: () => fetch('/categories.json')
 
       },
       {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: 'onsale',
         element: <Onsale></Onsale>,
-        loader: () => fetch('../public/products.json')
+        loader: () => fetch('/products.json')
 
       },
       {
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       {
         path: '/product/:id',
         element: <Details></Details>,
-        loader: () => fetch('../public/products.json')
+        loader: () => fetch('/products.json')
       }
     ]
   },

@@ -2,11 +2,13 @@
 import { NavLink } from "react-router-dom";
 
 const Categories = ({ categoryData }) => {
+
     return (
         <div className="bg-white p-5 rounded-2xl ">
+
             <div role="tablist" className="flex flex-col  space-y-4 items-center">
                 {
-                    categoryData.map(category =>
+                    categoryData.length > 0 && categoryData.map(category =>
                     (<NavLink key={category.id}
                         to={`/category/${category.category}`}
                         role="tab"
