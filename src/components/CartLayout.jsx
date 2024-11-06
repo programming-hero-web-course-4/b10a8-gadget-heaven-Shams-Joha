@@ -26,7 +26,7 @@ const CartLayout = () => {
 
 
     }
-    
+
     const [data, setData] = useState(cartData);
     let totalPrice = 0;
     for (const each of cartData) {
