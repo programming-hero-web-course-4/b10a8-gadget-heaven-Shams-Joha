@@ -1,8 +1,28 @@
-# React + Vite
+🌌 Gadget Heaven
+🚀 Live Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📄 Requirement Document
 
-Currently, two official plugins are available:
+🌟 Overview
+Welcome to Gadget Heaven — your go-to platform for browsing, categorizing, and managing tech gadgets with ease! This project showcases essential React concepts to deliver a dynamic, user-friendly shopping experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚛️ React Fundamentals Utilized
+🔨 Components: Created reusable building blocks, with a primary Main Layout component and multiple pages (e.g., Home, Dashboard, Statistics, Details).
+🎛️ Event Handling: Integrated for handling button interactions.
+⚙️ React Hooks: Utilized for state management and data fetching.
+🌐 Context API: Enables data sharing across components.
+🧭 React Router: Manages seamless navigation.
+📦 Props and Keys: Passes data effectively between components.
+And More...
+💾 Data Management with Context API & Local Storage
+Local Storage 📂
+Cart Count & Wishlist Count: Persistent across sessions for a smooth experience.
+Product Data: Stored and retrieved directly from Local Storage for quick access.
+Context API 🔗
+Data Synchronization: Keeps real-time item counts and data consistent across components, like the navbar.
+🌟 Key Features
+📁 Product Categorization: Filter and view products by category.
+🛒 Add to Cart/Wishlist: Add products effortlessly to your cart or wishlist.
+📊 Dashboard View: Toggle between Cart and Wishlist with total price calculations.
+⬇️ Sort Cart Items: Sort cart items in descending order with a single click.
+🔢 Dynamic Navbar Counts: Real-time display of cart and wishlist item counts in the navbar.
