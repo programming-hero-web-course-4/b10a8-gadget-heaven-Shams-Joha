@@ -9,16 +9,24 @@ import { useCart } from '../../context/HandleContext';
 
 
 const CartLayout = () => {
-    const { updateCartAmount } = useCart();
+    const cartData = getPrevItems();
+    const { cartAmount, updateCartAmount } = useCart();
     const navigate = useNavigate();
-    
+    const [isCartEmpty, setIsCartEmpty] = useState(false);
+    const [modalPrice, setmodalPrice] = useState(0);
+
+    useEffect(() => {
+        setIsCartEmpty(cartData.length === 0)
+    }, [cartData])
+
     const handleClick = () => {
+
         navigate('/');
-        clearCart();
-        updateCartAmount();
+
+
 
     }
-    const cartData = getPrevItems();
+    
     const [data, setData] = useState(cartData);
     let totalPrice = 0;
     for (const each of cartData) {
@@ -29,9 +37,17 @@ const CartLayout = () => {
         setData(sortedData);
     }
     const handleModal = () => {
-        {/* Open the modal using document.getElementById('ID').showModal() method */ }
+
         {
             document.getElementById('my_modal_1').showModal()
+            setmodalPrice(totalPrice);
+            clearCart();
+            updateCartAmount();
+            setData([]);
+            setIsCartEmpty(true);
+
+
+
         }
 
     }
@@ -44,7 +60,7 @@ const CartLayout = () => {
                     <p className="font-bold text-lg">Total Cost: {totalPrice}</p>
                     <button onClick={handleSort} className="font-bold border border-violet-500 text-violet-500 rounded-full btn">Sort by Price <TbSortAscendingShapes size={20} /></button>
                     {/* Show Modal On Click */}
-                    <button onClick={handleModal} className="btn rounded-full text-white bg-violet-500 font-bold">Purchase</button>
+                    <button onClick={handleModal} disabled={isCartEmpty} className="btn rounded-full text-white bg-violet-500 font-bold">Purchase</button>
                 </div>
 
             </div>
@@ -63,7 +79,7 @@ const CartLayout = () => {
 
 
                     <p className="py-4">Thanks for purchasing</p>
-                    <p className="py-4">Total: {totalPrice}</p>
+                    <p className="py-4">Total: {modalPrice}</p>
 
                     <div className="w-full">
 
